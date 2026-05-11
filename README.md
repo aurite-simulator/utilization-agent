@@ -19,14 +19,14 @@ Fires on the 1st of each month via the simulation's cron worker. For each run it
 
 ## Installation
 
-Clone into the framework's `agents/` directory and run setup:
+Clone into the framework's `agents/` directory and run the installer:
 
 ```bash
 git clone https://github.com/aurite-simulator/utilization-agent agents/utilization
-bash setup.sh
+bash agents/utilization/install.sh
 ```
 
-`setup.sh` automatically installs dependencies from `requirements.txt` into the shared virtualenv.
+`install.sh` installs dependencies into the shared virtualenv and appends the monthly cron entry to the model's `crontab` file (idempotent — safe to run multiple times).
 
 ## Configuration
 
